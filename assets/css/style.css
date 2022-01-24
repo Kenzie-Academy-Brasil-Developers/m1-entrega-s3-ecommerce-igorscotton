@@ -1,0 +1,179 @@
+header{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 70px;
+      background-color: #F5F5F5;
+      margin-bottom: 18px;
+}
+      header nav ul{
+            display: flex;
+      }
+      header nav ul li{
+            margin-right: 20px;
+      }
+      header nav ul li a{
+            text-decoration: none;
+            font-size: 16px;
+            COlor: #828282;
+      }
+      header nav ul li:hover{
+            font-weight: bold;
+            color: #333333;
+      }
+
+
+
+.principal-page{
+      display:flex;
+      font-family: 'Inter', sans-serif;
+}
+      
+main{
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 115px;
+}
+
+      
+.container{
+      display:flex;
+      flex-direction: column;
+      height: 376px;
+      width: 300px;
+      border: 2px solid #F5F5F5;
+      box-sizing: border-box;
+      margin-right: 54px;
+      margin-bottom: 61px;
+}
+
+.container:hover{
+      border: 2px solid #2E245E;
+}
+
+      .container .background-figure{
+            background-color: #F5F5F5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 156px;
+      }
+
+      .container .span-categories{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            width: 72px;
+            left: calc(50% - 72px/2 - 97px);
+            top: 9.3%;
+            bottom: 78.6%;
+            background-color: #2E245E;
+            color: white;
+            font-size: 12px;
+            margin: 20px 15px 15px 15px;
+      }
+
+      .container .product-name{
+            font-weight: bold;
+            font-style: normal;
+            font-size: 18px;
+            margin: 0px 15px;
+      }
+      .container .product-description{
+            color: #828282;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            margin: 15px 15px;
+      }
+
+      .container .product-price{
+         color:  #2E245E;
+         font-size: 12px;
+         font-weight: 600;
+         margin: 0px 15px  
+      }
+
+      .container a{
+            color: #828282;
+            line-height: 16px;
+            font-weight: 500;
+            font-size: 14px;
+            margin: 15px 15px 20px 15px; 
+      }
+
+.container2{
+      display: flex;
+      flex-direction: column;
+      width: 347px;
+      height: 387px;
+      margin-right: 112px;
+}
+
+      .container2 .research-box{
+            display: flex;
+      }
+
+      .container2 .research-box input{
+            background-color: #F5F5F5;
+            border: none;
+            height: 16px;
+            width: 232px;
+            padding: 17px 0px 17px 14px;
+            margin-right: 8px;
+      }
+      .container2 .research-box button{
+            border: none;
+            background-color: #6B54DE;
+            width: 96px;
+            color: white;
+      }
+
+      .container2 .buy-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+      }
+
+      .container2 .buy-box .buy-name{
+            background-color: #6B54DE;
+            height: 50px;
+            width: 347px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            color: white;
+            margin-top: 10px;
+      }
+
+      .container2 .buy-box .buy-name h3{
+            margin-top: 13px;
+      }
+      
+      .container2 .buy-items{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center; 
+           background-color: #F5F5F5;
+           width: 347px;
+           height: 344px;
+      }
+      
+      .container2 .buy-items span{
+            color: #333333;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 24px;
+      }
+
+      .container2 .buy-items p{
+            color: #828282;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+      }
+
