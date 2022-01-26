@@ -27,79 +27,8 @@
 
       <div class="principal-page">
 
-      <main>
-            <div class="container">
-                  <figure class="background-figure">
-                        <img src="img/Men-Jacket-Front-Black__15466 1.png" alt="">
-                        <figcaption></figcaption>
-                  </figure>
-                  <p class="span-categories"> <span>Camisetas</span> </p>
-                  <h2 class="product-name">Lightweight Jacket</h2>
-                  <p class="product-description">Adicione um pouco de energai ao seu guarda-roupa de inverno com esta jaqueta vibrante...</p>
-                  <p class="product-price"> <span>R$ 100,00</span> </p>
-                  <a href="">Adicionar ao carrinho</a>
-            </div>
-
-            <div class="container">
-                  <figure class="background-figure">
-                        <img src="img/image 1.png" alt="">
-                        <figcaption></figcaption>
-                  </figure>
-                  <p class="span-categories"> <span>Acessórios</span> </p>
-                  <h2 class="product-name">Black Hat</h2>
-                  <p class="product-description">O gorro Next.js chegou! Esta beldade bordada tem um ajuste confortável que garante que...</p>
-                  <p class="product-price"> <span>R$ 100,00</span> </p>
-                  <a href="">Adicionar ao carrinho</a>
-            </div>
-
-            <div class="container">
-                  <figure class="background-figure">
-                        <img src="img/Surgical-Mask-Black__89554 1.png" alt="">
-                        <figcaption></figcaption>
-                  </figure>
-                  
-                  <p class="span-categories"> <span>acessórios</span> </p>
-                  <h2 class="product-name">Mask</h2>
-                  <p class="product-description">Esta máscara facial durável é feita de duas camadas de tecido tratado e possui presilhas...</p>
-                  <p class="product-price"> <span>R$ 40,00</span> </p>
-                  <a href="">Adicionar ao carrinho</a>
-            </div>
-
-            <div class="container">
-                  <figure class="background-figure">
-                        <img src="img/Men-TShirt-Black-Front__70046 1.png" alt="">
-                        <figcaption></figcaption>
-                  </figure>
-                  <p class="span-categories"> <span>Camisetas</span> </p>
-                  <h2 class="product-name">T-shirt</h2>
-                  <p class="product-description">Esta t-shirt é imprescindível no seu guarda-roupa, combinando o caimento intemporal de...</p>
-                  <p class="product-price"> <span>R$ 100,00</span> </p>
-                  <a href="">Adicionar ao carrinho</a>
-            </div>
-
-            <div class="container">
-                  <figure class="background-figure">
-                        <img src="img/Men-TShirt-White-Front_70047 1.png" alt="">
-                        <figcaption></figcaption>
-                  </figure>
-                  <p class="span-categories"> <span>Camisetas</span> </p>
-                  <h2 class="product-name">Short-Sleeve T-Shirt</h2>
-                  <p class="product-description">Agora você encontrou a camiseta básica do seu guarda-roupa. É feito de um mais grosso...</p>
-                  <p class="product-price"> <span>R$ 100,00</span> </p>
-                  <a href="">Adicionar ao carrinho</a>
-            </div>
-
-            <div class="container">
-                  <figure class="background-figure">
-                        <img src="img/Men-Jacket-Black-Front- 15467 1.png" alt="">
-                        <figcaption></figcaption>
-                  </figure>
-                  <p class="span-categories"> <span>Camisetas</span> </p>
-                  <h2 class="product-name">Champion Packable Jacket</h2>
-                  <p class="product-description">Proteja-se dos elementos com esta jaqueta embalável Champion. Esta jaqueta de poliést...</p>
-                  <p class="product-price"> <span>R$ 100,00</span> </p>
-                  <a href="">Adicionar ao carrinho</a>
-            </div>
+      <main id="lista-items">
+            
       </main>
 
       <aside class="container2">
@@ -111,8 +40,19 @@
             <div class="buy-box">
                   <div class="buy-name"> <h3>Carrinho de compras</h3> </div>
                   <div class="buy-items">
-                        <span> <strong>Carrinho Vázio</strong> </span>
-                        <p>Adicione itens</p>
+                        <span id="span-hidden"> <strong>Carrinho Vázio</strong> </span>
+                        <p id="p-hidden">Adicione itens</p>
+                        <ul id='lista-compras' class="add-carrinho"> 
+                             
+                        </ul>
+                  </div>
+                  <div class="total-box hidden" id="box-total">
+                        <div class="total">
+                              <p>Quantidade:</p> <span id="end">0</span>
+                        </div>
+                        <div class="total">
+                              <p>Total:</p> <span id="end1">R$ 200,00</span>
+                        </div>
                   </div>
             </div>
       </aside>

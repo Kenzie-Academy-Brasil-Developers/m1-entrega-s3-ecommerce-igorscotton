@@ -32,6 +32,7 @@ header{
 main{
       display: flex;
       flex-wrap: wrap;
+      margin-right: 21px;
       margin-left: 115px;
 }
 
@@ -43,7 +44,7 @@ main{
       width: 300px;
       border: 2px solid #F5F5F5;
       box-sizing: border-box;
-      margin-right: 54px;
+      margin-right: 52px;
       margin-bottom: 61px;
 }
 
@@ -96,12 +97,16 @@ main{
          margin: 0px 15px  
       }
 
-      .container a{
+      .container .link-compra{
             color: #828282;
             line-height: 16px;
             font-weight: 500;
             font-size: 14px;
             margin: 15px 15px 20px 15px; 
+      }
+
+      .container .link-compra:hover{
+            font-weight: bold;
       }
 
 .container2{
@@ -110,6 +115,7 @@ main{
       width: 347px;
       height: 387px;
       margin-right: 112px;
+      
 }
 
       .container2 .research-box{
@@ -177,3 +183,121 @@ main{
             line-height: 16px;
       }
 
+      .hidden{
+            display: none;
+      }
+
+      .container2 .buy-box .buy-items .add-carrinho .lista-items-compra{
+            display: flex;
+            margin-bottom: 20px;
+      }
+      .container2 .buy-box .buy-items .add-carrinho{
+            align-self: flex-start;
+            margin-left: 20px;
+      }
+
+      .container2 .buy-box .buy-items .add-carrinho .lista-items-compra .imagem-carrinho{
+            background-color: white;
+            margin-right: 15px;
+            height: 80px;
+            max-width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+      }
+
+      .container2 .buy-box .buy-items .add-carrinho .lista-items-compra .imagem-carrinho img{
+            max-height: 61px;
+      }
+
+      .container2 .buy-box .buy-items .add-carrinho .lista-items-compra .infos-compra{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+      }
+
+      .container2 .buy-box .buy-items .add-carrinho .lista-items-compra .infos-compra h2{
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 10px;
+      }
+
+      .container2 .buy-box .buy-items .add-carrinho .lista-items-compra .infos-compra p{
+            margin-bottom: 10px
+      }
+
+      .container2 .buy-box .buy-items .add-carrinho .lista-items-compra .infos-compra p span{
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 600;
+            color: #2E245E;  
+      }
+
+      .container2 .buy-box .buy-items .add-carrinho .lista-items-compra .infos-compra a{
+            color: #828282;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+      }
+
+
+
+      .container2 .buy-box .total-box{
+           background-color: #333333;
+           width: 347px;
+           height: 126px;
+           color: white;
+      }
+      
+      .container2 .buy-box .total-box .total{
+         display: flex;
+         width: 100%;
+         height: 50%;
+         align-items: center;
+         margin-left: 17px;
+         font-size: 16px;
+         font-weight: 500;
+      }
+
+      .container2 .buy-box .total-box .total #end{
+           margin-left: 175px;
+           color: #828282;    
+      }
+
+      .container2 .buy-box .total-box .total #end1{
+            margin-left: 160px;  
+            color: #828282;  
+       }
+
+
+
+       @media screen and (max-width: 1400px){
+            main{
+                   margin-left: 40px;
+            }
+            .container{
+                  width: 250px;
+                  margin-right: 45px;
+            }
+            .container2{
+                  margin-right: 80px;
+            }
+       }
+
+
+       @media screen and (max-width: 1100px) {
+             .principal-page{
+                   flex-direction:column;
+             }
+
+             .lista-items{
+                   justify-content: flex-end;
+             }
+
+             .container2{
+                   align-self: center;
+                   margin: 0;
+             }
+       }
