@@ -47,6 +47,8 @@ let contador = 0;
 
 let valor = 0;
 
+let height = 344;
+
 const mainSite = document.getElementById('lista-items');
 
 function createItem(arrayItems, indice){
@@ -123,7 +125,7 @@ function createItem(arrayItems, indice){
             mainSite.appendChild(card)
 
             const compraCard = document.getElementsByClassName('link-compra')[i];
-            compraCard.addEventListener('click', () => {contador++; valor += price; arrayCompra.push(arrayItems[i]); addCarrinho(); removeSpan(); addTotal();})
+            compraCard.addEventListener('click', () => {contador++; valor += price; arrayCompra.push(arrayItems[i]); addCarrinho(); removeSpan(); addTotal(); addheight();})
             }
       }   
 }
@@ -195,7 +197,7 @@ function addCarrinho(){
 
       card.appendChild(liCard);
 
-      aCard.addEventListener('click', () => {contador--;valor -= price; arrayCompra.splice(i, 1); addCarrinho(); addSpan(); subTotal();})
+      aCard.addEventListener('click', () => {contador--;valor -= price; arrayCompra.splice(i, 1); addCarrinho(); addSpan(); subTotal();removeHeight()})
       }      
 }
 
@@ -239,111 +241,47 @@ function subTotal(){
             div.classList.add('hidden');
       }
 }
+let aumenta = 0;
 
+function addheight(){      
+      const div = document.getElementsByClassName('buy-items');
+      if(contador > 3){           
+            aumenta += 100;
+            div[0].style.height = height + aumenta + 'px'; 
+      }      
+}
 
-//<==========================BOnus=======================================>
-
-function categories(event){
-     if(event = 'Acessórios'){
-      
-     }
-     if(event = 'Calçados'){
-           
-     }
-     if(event = 'Camisetas'){
-           
-     }     
+function removeHeight(){
+      if(contador >= 3){
+            const div = document.getElementsByClassName('buy-items');
+            aumenta -= 100;
+            div[0].style.height = height + aumenta + 'px';
+      } 
 }
 
 
-/*
-<div class="container">
-<figure class="background-figure">
-<img src="img/Men-Jacket-Front-Black__15466 1.png" alt="">
-<figcaption></figcaption>
-</figure>
-<p class="span-categories"> <span>Camisetas</span> </p>
-<h2 class="product-name">Lightweight Jacket</h2>
-<p class="product-description">Adicione um pouco de energai ao seu guarda-roupa de inverno com esta jaqueta vibrante...</p>
-<p class="product-price"> <span>R$ 100,00</span> </p>
-<a class="link-compra" href="">Adicionar ao carrinho</a>
-</div>
+//<==========================BOnus=======================================>
+const buttonResearch = document.querySelector('research-box button');
+const inputResearch = document.querySelector('research-box input');
 
-<div class="container">
-<figure class="background-figure">
-<img src="img/image 1.png" alt="">
-<figcaption></figcaption>
-</figure>
-<p class="span-categories"> <span>Acessórios</span> </p>
-<h2 class="product-name">Black Hat</h2>
-<p class="product-description">O gorro Next.js chegou! Esta beldade bordada tem um ajuste confortável que garante que...</p>
-<p class="product-price"> <span>R$ 100,00</span> </p>
-<a class="link-compra" href="">Adicionar ao carrinho</a>
-</div>
+const linkCategories = document.querySelectorAll('nav ul li a');
 
-<div class="container">
-<figure class="background-figure">
-<img src="img/Surgical-Mask-Black__89554 1.png" alt="">
-<figcaption></figcaption>
-</figure>
+function categories(){
+    for(let i = 0; i < linkCategories.length; i++){
+      if(linkCategories[i].innerText === 'Todos'){
 
-<p class="span-categories"> <span>Acessórios</span> </p>
-<h2 class="product-name">Mask</h2>
-<p class="product-description">Esta máscara facial durável é feita de duas camadas de tecido tratado e possui presilhas...</p>
-<p class="product-price"> <span>R$ 40,00</span> </p>
-<a class="link-compra" href="">Adicionar ao carrinho</a>
-</div>
+      }
+      if(linkCategories[i].innerText === 'Acessórios'){
 
-<div class="container">
-<figure class="background-figure">
-<img src="img/Men-TShirt-Black-Front__70046 1.png" alt="">
-<figcaption></figcaption>
-</figure>
-<p class="span-categories"> <span>Camisetas</span> </p>
-<h2 class="product-name">T-shirt</h2>
-<p class="product-description">Esta t-shirt é imprescindível no seu guarda-roupa, combinando o caimento intemporal de...</p>
-<p class="product-price"> <span>R$ 100,00</span> </p>
-<a class="link-compra" href="">Adicionar ao carrinho</a>
-</div>
+      }
+      if(linkCategories[i].innerText === 'Calçados'){
 
-<div class="container">
-<figure class="background-figure">
-<img src="img/Men-TShirt-White-Front_70047 1.png" alt="">
-<figcaption></figcaption>
-</figure>
-<p class="span-categories"> <span>Camisetas</span> </p>
-<h2 class="product-name">Short-Sleeve T-Shirt</h2>
-<p class="product-description">Agora você encontrou a camiseta básica do seu guarda-roupa. É feito de um mais grosso...</p>
-<p class="product-price"> <span>R$ 100,00</span> </p>
-<a class="link-compra" href="">Adicionar ao carrinho</a>
-</div>
+      }
+      if(linkCategories[i].innerText === 'Camisetas'){
 
-<div class="container">
-<figure class="background-figure">
-<img src="img/Men-Jacket-Black-Front- 15467 1.png" alt="">
-<figcaption></figcaption>
-</figure>
-<p class="span-categories"> <span>Camisetas</span> </p>
-<h2 class="product-name">Champion Packable Jacket</h2>
-<p class="product-description">Proteja-se dos elementos com esta jaqueta embalável Champion. Esta jaqueta de poliést...</p>
-<p class="product-price"> <span>R$ 100,00</span> </p>
-<a class="link-compra" href="">Adicionar ao carrinho</a>
-</div> 
-
-
-
-
- <li class="lista-items-compra">  
-  <div class="imagem-carrinho">
-                                          <img src="img/Men-Jacket-Front-Black__15466 1.png" alt="">
-                                    </div>
-                                    <div class="infos-compra">
-                                          <h2>Lightweight Jacket</h2>
-                                          <p> <span>R$ 100,00</span> </p>
-                                          <a href="">Remover Produto</a>
-                                    </div>
-                              </li>
-*/                                  
-
+      }
+    }  
+    
+}
 
 
